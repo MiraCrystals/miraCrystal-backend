@@ -1,7 +1,7 @@
 // routes/orderRoutes.js
 const express = require("express");
 const router = express.Router();
-const { placeCODOrder } = require("../controller/OrderController.js");
+const { placeCODOrder } = require("../controller/orderController.js");
 const Order = require("../models/Order.js");
 
 router.post("/place-cod-order", placeCODOrder);
