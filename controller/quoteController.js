@@ -1,13 +1,13 @@
 // controllers/quoteController.js
-const Quote = require('../models/Quote');
-
+const Quote = require("../models/Quote");
+//
 // GET all quotes
 exports.getQuotes = async (req, res) => {
   try {
     const quotes = await Quote.find();
     res.json(quotes);
   } catch (err) {
-    res.status(500).json({ message: 'Error fetching quotes', error: err });
+    res.status(500).json({ message: "Error fetching quotes", error: err });
   }
 };
 
@@ -19,6 +19,6 @@ exports.createQuote = async (req, res) => {
     await newQuote.save();
     res.status(201).json(newQuote);
   } catch (err) {
-    res.status(400).json({ message: 'Error creating quote', error: err });
+    res.status(400).json({ message: "Error creating quote", error: err });
   }
 };
